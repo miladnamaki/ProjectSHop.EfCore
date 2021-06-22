@@ -11,6 +11,7 @@ namespace Ef.Core.Application.Contract
     {
         void Create(CreateProuductCategory command);
         void Edit(EditProductCategory command);
+        EditProductCategory GetDetails(int id);
         List<ProductCategoryViewModel> Search(string name);
 
 

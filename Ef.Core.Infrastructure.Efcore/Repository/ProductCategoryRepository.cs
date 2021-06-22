@@ -37,6 +37,15 @@ namespace Ef.Core.Infrastructure.Efcore.Repository
 
         }
 
+        public EditProductCategory GetDetails(int id)
+        {
+            return EfContext.ProductCategories.Select(x => new EditProductCategory
+            {
+                Id = x.Id,
+                name = x.Name
+            }).FirstOrDefault(x => x.Id== id);
+        }
+
         public void SaveChange()
         {
             EfContext.SaveChanges();

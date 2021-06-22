@@ -13,6 +13,7 @@ namespace Ef.DoMain.ProductCategory.agg
         bool Exist(string name);
         void Create(ProductCategory productCategory);
         void SaveChange();
+        EditProductCategory GetDetails(int id);
         List<ProductCategoryViewModel> Search(string name);
     }
 }

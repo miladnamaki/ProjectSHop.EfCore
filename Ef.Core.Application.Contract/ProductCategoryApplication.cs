@@ -41,6 +41,11 @@ namespace Ef.Core.Application.Contract
 
         }
 
+        public EditProductCategory GetDetails(int id)
+        {
+            return ProductCategoryRepository.GetDetails(id);
+        }
+
         public List<ProductCategoryViewModel> Search(string name)
         {
             return ProductCategoryRepository.Search(name);

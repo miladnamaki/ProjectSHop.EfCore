@@ -1,0 +1,18 @@
+﻿@page
+@model E.Project.Pages.ProductCategory.EditModel
+@{
+}
+<form method="post">
+
+    <div class="row">
+        <div class="col-md-6 form-group">
+            <Label asp-for="@Model.command.name">نام گروه </Label>
+            <input class="form-control" type="text" asp-for="@Model.command.name" />
+        </div>
+        <input type="hidden" asp-for="@Model.command.Id" value="@Model.command.Id" />
+        <div class="col-md-12">
+            <button type="submit" class="btn btn-success">ویرایش</button>
+        </div>
+
+    </div>
+</form>
