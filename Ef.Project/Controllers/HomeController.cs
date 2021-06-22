@@ -6,16 +6,19 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Ef.Core.Application.Contract;
+using Microsoft.IdentityModel.Tokens;
 
 namespace Ef.Project.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private readonly IProductCategoryApplication productCategoryApplication;
+        public HomeController(ILogger<HomeController> logger, IProductCategoryApplication productCategoryApplication)
         {
             _logger = logger;
+            this.productCategoryApplication = productCategoryApplication;
         }
 
         public IActionResult Index()
@@ -25,6 +28,12 @@ namespace Ef.Project.Controllers
 
         public IActionResult Privacy()
         {
+            return View();
+        }
+        
+       public IActionResult ProductCategory()
+        {
+            
             return View();
         }
 
