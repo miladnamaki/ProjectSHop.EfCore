@@ -1,9 +1,11 @@
 using Ef.Core.Application.Contract;
+using Ef.Core.Infrastructure.Efcore;
 using Ef.Core.Infrastructure.Efcore.Repository;
 using Ef.DoMain.ProductCategory.agg;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -24,6 +26,7 @@ namespace Ef.Project
         {
             services.AddTransient<IProductCategoryApplication, ProductCategoryApplication>();
             services.AddTransient<IProductCategoryRepository, ProductCategoryRepository>();
+            services.AddDbContext<EfContext>(x => x.UseSqlServer(Configuration.GetConnectionString("EfProjectShop")));
 
             services.AddControllersWithViews();
         }
