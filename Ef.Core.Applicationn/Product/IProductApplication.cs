@@ -9,8 +9,8 @@ namespace Ef.Core.Applicationn.Product
     public interface IProductApplication
     {
         void Create( CreateProduct command);
-        void Remove();
-        void Resore();
+        void Remove(int id);
+        void Resore(int id );
 
         EditProduct GetDetails(int id );
 

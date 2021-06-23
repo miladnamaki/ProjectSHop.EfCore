@@ -13,6 +13,8 @@ namespace Ef.DoMain.ProductAgg
         EditProduct GetDetalis(int id);
         void Create(Product product);
         void SaveChange();
-
+        bool Exist(string name ,int  categoryid);
+        List<ProductViewModel> Search(ProductSearchModel command);
+        void Attach(Product cmmond); //baraye inke betonim az asnotraking baraye edit kardan estgefade konim
     }
 }
