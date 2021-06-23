@@ -33,12 +33,11 @@ namespace Ef.Core.Application.Contract
         {
             var productcategory = ProductCategoryRepository.Get(command.Id);
             if (productcategory == null)
-            {
                 return;
-            }
+            
             productcategory.Edit(command.name);
             ProductCategoryRepository.SaveChange();
-
+            
         }
 
         public EditProductCategory GetDetails(int id)

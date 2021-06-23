@@ -58,6 +58,8 @@ namespace E.Project
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
+
+
             });
         }
     }

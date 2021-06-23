@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ef.Core.Application.Contrac
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ef.Core.Applicationn", "Ef.Core.Applicationn\Ef.Core.Applicationn.csproj", "{4D5AA96D-C73D-40A2-99D0-62CEC43BD5D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E.Project", "E.Project\E.Project.csproj", "{C0E1905F-1807-49C0-AFF8-0ED3B5F99528}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "E.Project", "E.Project\E.Project.csproj", "{C0E1905F-1807-49C0-AFF8-0ED3B5F99528}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

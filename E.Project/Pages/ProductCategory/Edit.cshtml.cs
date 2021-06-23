@@ -24,9 +24,9 @@ namespace E.Project.Pages.ProductCategory
             command = ProductCategoryApplication.GetDetails(id);
         }
 
-        public RedirectToPageResult OnPost(EditProductCategory name)
+        public RedirectToPageResult OnPost(EditProductCategory commandd)
         {
-            ProductCategoryApplication.Edit(name);
+            ProductCategoryApplication.Edit(commandd);
             return RedirectToPage("./Index");
         }
     }
