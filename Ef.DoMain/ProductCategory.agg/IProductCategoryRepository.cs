@@ -15,5 +15,6 @@ namespace Ef.DoMain.ProductCategory.agg
         void SaveChange();
         EditProductCategory GetDetails(int id);
         List<ProductCategoryViewModel> Search(string name);
+        List<ProductCategoryViewModel> GetAll();
     }
 }

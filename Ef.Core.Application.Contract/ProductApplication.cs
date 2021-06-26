@@ -72,7 +72,7 @@ namespace Ef.Core.Application.Contract
                 return;
 
             }
-            productRepository.Attach(product);
+            //productRepository.Attach(product);
             product.Edit(command.Name,command.UnitPrice,command.CategoryId);
            
             productRepository.SaveChange();

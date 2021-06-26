@@ -1,0 +1,28 @@
+﻿@page
+@model EditModel
+@{
+}
+<form method="post">
+
+    <div class="row">
+        <div class="col-md-6 form-group">
+            <Label asp-for="command.Name">نام </Label>
+            <input class="form-control" type="text" asp-for="command.Name"   value="@Model.command.Name"/>
+        </div>
+        <div class="col-md-6 form-group">
+            <Label asp-for="command.UnitPrice">قیمت </Label>
+            <input class="form-control" type="number" asp-for="command.UnitPrice" />
+        </div>
+        <div class="col-md-6 form-group">
+            <Label asp-for="command.CategoryId">کروه </Label>
+            <select asp-items="Model.ProductCategory" asp-for="command.CategoryId" class="form-control">
+                <option value="0">گروه محصول را انتخاب کنید</option>
+            </select>
+        </div>
+        <input type="hidden" asp-for="command.Id" value="@Model.command.Id" />
+        <div class="col-md-12">
+            <button type="submit" class="btn btn-success">ویرایش</button>
+        </div>
+
+    </div>
+</form>

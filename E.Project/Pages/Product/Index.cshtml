@@ -1,0 +1,48 @@
+﻿@page
+@model IndexModel
+@{
+}
+<div class="text-center">
+    <h1 class="display-4">لیست محصولات</h1>
+    <p> <a asp-page="./create" class="btn btn-success">ایجاد جدید</a></p>
+
+    <table class="table table-responsive table-bordered table-striped">
+        <thead>
+
+            <tr>
+                <td>#</td>
+                <td>نام</td>
+                <td>قیمت</td>
+                <td>نام گروه</td>
+                <td>تاریخ ایجاد</td>
+                <td>عملیات</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Products)
+            {
+                <tr>
+                    <th>@item.Id</th>
+                    <th>@item.Name</th>
+                    <th>@item.UnitPrice</th>
+                    <th>@item.Category</th>
+                    <th>@item.CreationDate</th>
+                    <th>
+                        <a asp-page="./Edit" asp-route-id="@item.Id" >ویرایش</a>
+                        @if (item.IsRemoved)
+                        {
+                            <a asp-page="./index" asp-page-handler="Remove" asp-route-id="@item.Id" class="btn btn-danger">غیر فعال</a>
+
+                        }
+                        else
+                        {
+                            <a asp-page="./index" asp-page-handler="Restore" asp-route-id="@item.Id"  class="btn btn-success">فعال سازی</a>
+
+                        }
+                    </th>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div> 

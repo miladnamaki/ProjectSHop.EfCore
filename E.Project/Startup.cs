@@ -13,6 +13,8 @@ using Ef.Core.Infrastructure.Efcore.Repository;
 using Ef.DoMain.ProductCategory.agg;
 using Microsoft.EntityFrameworkCore;
 using Ef.Core.Application.Contract;
+using Ef.Core.Applicationn.Product;
+using Ef.DoMain.ProductAgg;
 
 namespace E.Project
 {
@@ -30,6 +32,8 @@ namespace E.Project
         {
             services.AddTransient<IProductCategoryApplication, ProductCategoryApplication>();
             services.AddTransient<IProductCategoryRepository, ProductCategoryRepository>();
+            services.AddTransient<IProductApplication, ProductApplication>();
+            services.AddTransient<IProductRepository, ProductRepository>();
             services.AddDbContext<EfContext>(x => x.UseSqlServer(Configuration.GetConnectionString("EfProjectShop")));
 
             services.AddRazorPages();

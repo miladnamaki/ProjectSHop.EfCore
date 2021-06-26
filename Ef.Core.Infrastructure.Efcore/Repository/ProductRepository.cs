@@ -34,7 +34,7 @@ namespace Ef.Core.Infrastructure.Efcore.Repository
 
         public Product Get(int id)
         {
-            return _efContext.Products.AsNoTracking().FirstOrDefault(x => x.Id == id);
+            return _efContext.Products/*AsNoTracking()*/.FirstOrDefault(x => x.Id == id);
         }
 
         public EditProduct GetDetalis(int id)

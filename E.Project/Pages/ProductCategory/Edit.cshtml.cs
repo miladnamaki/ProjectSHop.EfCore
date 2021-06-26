@@ -12,7 +12,7 @@ namespace E.Project.Pages.ProductCategory
     public class EditModel : PageModel
     {
         public EditProductCategory command;
-        public readonly IProductCategoryApplication ProductCategoryApplication;
+        private readonly IProductCategoryApplication ProductCategoryApplication;
 
         public EditModel(IProductCategoryApplication productCategoryApplication)
         {

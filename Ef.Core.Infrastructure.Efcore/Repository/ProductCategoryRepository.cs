@@ -37,6 +37,16 @@ namespace Ef.Core.Infrastructure.Efcore.Repository
 
         }
 
+        public List<ProductCategoryViewModel> GetAll()
+        {
+            return EfContext.ProductCategories.Select(x =>  new ProductCategoryViewModel
+            {
+                Id = x.Id,
+                Name = x.Name,
+
+            }).ToList();
+        }
+
         public EditProductCategory GetDetails(int id)
         {
             return EfContext.ProductCategories.Select(x => new EditProductCategory

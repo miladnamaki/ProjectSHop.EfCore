@@ -13,6 +13,8 @@ namespace Ef.Core.Application.Contract
         void Edit(EditProductCategory command);
         EditProductCategory GetDetails(int id);
         List<ProductCategoryViewModel> Search(string name);
+        List<ProductCategoryViewModel> Gettall();
+
 
 
     }
